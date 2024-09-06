@@ -12,21 +12,15 @@ public class Detroitx extends JavaPlugin {
         public void onEnable() {
 
                 getLogger().info("§eLoading configuration...");
-
-                this.loadConfig();
-
+                
                 getLogger().info("§aLoaded configuration!");
 
                 getLogger().info("§eRegistering commands...");
 
-                initializeCommands();
-
                 getLogger().info("§aRegistered commands!");
 
                 getLogger().info("§eInitializing Gamerules...");
-
-                initializeGameRules();
-
+        
                 getLogger().info("§aInitizlized Gamerules!");
 
                 getLogger().info("§e------------------------------------");
