@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class SetRankCommand implements CommandExecutor {
+public class RankCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
             Player player = (Player) sender;
@@ -18,7 +18,6 @@ public class SetRankCommand implements CommandExecutor {
                     try {
                         Player target = Bukkit.getPlayer(args[0]);
                         PlayerRank newRank = PlayerRank.valueOf(args[1].toUpperCase().replace("+", "P"));
-                        GodspunkyPlayer.getUser(target).setRank(newRank);
                         String prefix = newRank == PlayerRank.DEFAULT ? "&7Default" : newRank.getPrefix().replace("[", "").replace("]", "");
                         sender.sendMessage("&aSet " + args[0] + "'s Rank To " + prefix + "&a!");
                         return true;
