@@ -25,7 +25,7 @@ public class RankCommand implements CommandExecutor {
                         e.printStackTrace();
                     }
                 } else {
-                    sender.sendMessage("&cUsage: /setrank <player> <rank>");
+                    sender.sendMessage("&cUsage: /rank <player> <rank>");
                     return false;
                 }
             } else {
