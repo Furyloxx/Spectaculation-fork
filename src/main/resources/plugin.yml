@@ -1,0 +1,7 @@
+name: Detroitx
+version: ${project.version}
+main: me.furyloxx.detroitx.Detroitx
+authors: [ Furyloxx]
+description: Retarted
+commands:
+  rank:
