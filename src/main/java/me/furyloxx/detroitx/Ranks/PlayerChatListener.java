@@ -8,7 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class PlayerChatListener implements Listener {
-    @EventHandler(priority = EventPriority.LOW)
+    @EventHandler
     public void Event(AsyncPlayerChatEvent e) {
         String userTag;
         e.setFormat("%1$s" + (data.rank== PlayerRank.DEFAULT ? ChatColor.GRAY : ChatColor.WHITE) + ": %2$s");
