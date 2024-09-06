@@ -2,6 +2,7 @@ package me.furyloxx.detroitx.Ranks;
 
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
+import me.furyloxx.detroitx.Ranks.*;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
@@ -10,7 +11,6 @@ public class PlayerChatListener implements Listener {
     @EventHandler(priority = EventPriority.LOW)
     public void Event(AsyncPlayerChatEvent e) {
         String userTag;
-        GodspunkyPlayer data = GodspunkyPlayer.getUser(e.getPlayer());
         e.setFormat("%1$s" + (data.rank== PlayerRank.DEFAULT ? ChatColor.GRAY : ChatColor.WHITE) + ": %2$s");
         e.getPlayer().setDisplayName(e.getPlayer().getName());
         PlayerRank rank = data.rank;
