@@ -113,7 +113,6 @@ public final class Spectaculation extends JavaPlugin
         SLog.info("Loading listeners...");
         loadListeners();
         SLog.info("Registering NPCs...");
-        registerNPCS();
         SLog.info("Starting entity spawners...");
         EntitySpawner.startSpawnerTask();
         SLog.info("Establishing player regions...");
@@ -256,21 +255,6 @@ public final class Spectaculation extends JavaPlugin
         new ItemListener();
         new GUIListener();
         new WorldListener();
-    }
-
-    private void registerNPCS()
-    {
-        Reflections reflections = new Reflections("me.superischroma.spectaculation.npc");
-        for (Class<? extends SkyblockNPC> npcClazz : reflections.getSubTypesOf(SkyblockNPC.class)){
-            try {
-                npcClazz.getDeclaredConstructor().newInstance();
-            }catch (Exception ex){
-                ex.printStackTrace();
-
-            }
-        }
-        SLog.info("Loaded " + SkyblockNPCManager.getNPCS().size() + " npcs");
-
     }
 
     private void startPopulators()
