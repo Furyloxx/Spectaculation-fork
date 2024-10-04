@@ -3,4 +3,4 @@ islands:
   x: 0
   z: 0
 name : 'SKYBLOCK'
-ip : 'mc.hypixel.net'  # ip you want to display in scoreboard
+ip : 'sb.skypixel.net'  # ip you want to display in scoreboard

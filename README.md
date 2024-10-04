@@ -51,3 +51,8 @@ A fork of the Spectaculation Hypixel SkyBlock plugin, originally coded by Super,
 - Place the plugin JAR file in your server's plugins  folder.
 - Restart the server.
 ## Discord : devil_gamer_xd
+
+
+## Stuff done by me:
+- Pat NPC & GUI
+- Entity Leveling System
