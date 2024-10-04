@@ -224,6 +224,11 @@ public class TarantulaBroodfather extends EntitySpider implements SNMSEntity, En
         {
             return "";
         }
+        
+        @Override
+    public double getEntityLevel() {
+      return 300.0;
+    }
 
         @Override
         public double getEntityMaxHealth()
