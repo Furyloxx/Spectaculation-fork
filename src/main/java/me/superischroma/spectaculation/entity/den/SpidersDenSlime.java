@@ -12,13 +12,18 @@ public class SpidersDenSlime implements SlimeStatistics, EntityFunction
     @Override
     public String getEntityName()
     {
-        return "Slime";
+        return "Rain Slime";
     }
 
     @Override
     public double getEntityMaxHealth()
     {
-        return SUtil.random(200.0, 400.0);
+        return 800.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 8.0;
     }
 
     @Override

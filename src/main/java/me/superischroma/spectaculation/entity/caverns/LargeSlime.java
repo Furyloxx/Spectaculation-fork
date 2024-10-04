@@ -13,13 +13,18 @@ public class LargeSlime implements SlimeStatistics, EntityFunction
     @Override
     public String getEntityName()
     {
-        return "Slime";
+        return "Emerald Slime";
     }
 
     @Override
     public double getEntityMaxHealth()
     {
         return 250.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 15.0;
     }
 
     @Override

@@ -18,6 +18,11 @@ public class BroodMother extends BaseSpider
     {
         return 6000.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 12.0;
+    }
 
     @Override
     public double getDamageDealt()

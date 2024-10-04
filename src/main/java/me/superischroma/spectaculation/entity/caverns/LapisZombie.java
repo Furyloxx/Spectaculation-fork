@@ -25,6 +25,11 @@ public class LapisZombie implements EntityFunction, EntityStatistics
     }
 
     @Override
+    public double getEntityLevel() {
+      return 7.0;
+    }
+
+    @Override
     public double getDamageDealt()
     {
         return 50.0;

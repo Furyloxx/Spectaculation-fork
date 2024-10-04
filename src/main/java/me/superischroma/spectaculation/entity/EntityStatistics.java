@@ -3,6 +3,7 @@ package me.superischroma.spectaculation.entity;
 public interface EntityStatistics
 {
     String getEntityName();
+    double getEntityLevel();
     double getEntityMaxHealth();
     double getDamageDealt();
     double getXPDropped();
@@ -13,10 +14,6 @@ public interface EntityStatistics
     default double getMovementSpeed()
     {
         return -1.0;
-    }
-    default double getEntityLevel()
-    {
-        return 1;
     }
     default boolean dealsTrueDamage()
     {

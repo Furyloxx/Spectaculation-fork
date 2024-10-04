@@ -18,13 +18,18 @@ public class EnchantedDiamondZombie extends BaseZombie
     @Override
     public String getEntityName()
     {
-        return "Zombie";
+        return "Miner Zombie";
     }
 
     @Override
     public double getEntityMaxHealth()
     {
         return 300.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 20.0;
     }
 
     @Override

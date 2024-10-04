@@ -25,6 +25,11 @@ public class SmallSlime implements SlimeStatistics, EntityFunction
     {
         return 70.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 5.0;
+    }
 
     @Override
     public int getSize()

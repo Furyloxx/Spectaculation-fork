@@ -17,7 +17,7 @@ public class EnchantedDiamondSkeleton implements EntityStatistics, EntityFunctio
     @Override
     public String getEntityName()
     {
-        return "Skeleton";
+        return "Miner Skeleton";
     }
 
     @Override
@@ -30,6 +30,11 @@ public class EnchantedDiamondSkeleton implements EntityStatistics, EntityFunctio
     public double getDamageDealt()
     {
         return 190.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 20.0;
     }
 
     @Override

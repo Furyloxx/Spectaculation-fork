@@ -24,6 +24,11 @@ public class Pigman implements EntityFunction, EntityStatistics
     {
         return 250.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 10.0;
+    }
 
     @Override
     public double getDamageDealt()

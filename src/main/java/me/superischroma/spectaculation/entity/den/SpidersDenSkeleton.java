@@ -15,13 +15,18 @@ public class SpidersDenSkeleton implements EntityStatistics, EntityFunction
     @Override
     public String getEntityName()
     {
-        return "Skeleton";
+        return "Gravel Skeleton";
     }
 
     @Override
     public double getEntityMaxHealth()
     {
         return 100.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 2.0;
     }
 
     @Override

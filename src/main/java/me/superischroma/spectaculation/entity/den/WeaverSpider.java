@@ -13,6 +13,11 @@ public class WeaverSpider extends BaseSpider
     {
         return 160.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 3.0;
+    }
 
     @Override
     public double getDamageDealt()

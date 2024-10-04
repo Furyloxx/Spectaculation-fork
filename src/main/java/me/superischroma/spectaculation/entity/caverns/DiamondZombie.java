@@ -14,13 +14,18 @@ public class DiamondZombie extends BaseZombie
     @Override
     public String getEntityName()
     {
-        return "Zombie";
+        return "Miner Zombie";
     }
 
     @Override
     public double getEntityMaxHealth()
     {
         return 250.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 15.0;
     }
 
     @Override

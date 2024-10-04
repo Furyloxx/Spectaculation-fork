@@ -14,7 +14,7 @@ public class DiamondSkeleton implements EntityStatistics, EntityFunction
     @Override
     public String getEntityName()
     {
-        return "Skeleton";
+        return "Miner Skeleton";
     }
 
     @Override
@@ -27,6 +27,11 @@ public class DiamondSkeleton implements EntityStatistics, EntityFunction
     public double getDamageDealt()
     {
         return 150.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 15.0;
     }
 
     @Override

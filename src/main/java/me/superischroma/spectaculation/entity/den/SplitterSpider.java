@@ -17,6 +17,11 @@ public class SplitterSpider extends BaseSpider
     {
         return 180.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 2.0;
+    }
 
     @Override
     public double getDamageDealt()

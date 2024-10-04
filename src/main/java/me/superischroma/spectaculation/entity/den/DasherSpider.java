@@ -11,7 +11,12 @@ public class DasherSpider extends BaseSpider
     @Override
     public double getEntityMaxHealth()
     {
-        return 160.0;
+        return 170.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 4.0;
     }
 
     @Override

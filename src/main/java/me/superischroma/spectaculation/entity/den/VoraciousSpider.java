@@ -13,6 +13,11 @@ public class VoraciousSpider extends BaseSpider
     {
         return 1000.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 42.0;
+    }
 
     @Override
     public double getDamageDealt()

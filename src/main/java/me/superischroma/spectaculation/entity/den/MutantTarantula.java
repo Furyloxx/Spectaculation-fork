@@ -29,6 +29,11 @@ public class MutantTarantula extends BaseSpider
     {
         return 576000;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 370.0;
+    }
 
     @Override
     public double getDamageDealt()

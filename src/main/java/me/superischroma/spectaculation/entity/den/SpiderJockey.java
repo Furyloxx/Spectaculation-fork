@@ -22,7 +22,12 @@ public class SpiderJockey extends BaseSpider implements JockeyStatistics
     @Override
     public double getEntityMaxHealth()
     {
-        return 180.0;
+        return 220.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 3.0;
     }
 
     @Override

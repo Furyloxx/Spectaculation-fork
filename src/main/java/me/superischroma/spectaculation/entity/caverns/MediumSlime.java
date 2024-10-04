@@ -27,6 +27,11 @@ public class MediumSlime implements SlimeStatistics, EntityFunction
     }
 
     @Override
+    public double getEntityLevel() {
+      return 10.0;
+    }
+
+    @Override
     public int getSize()
     {
         return 7;
