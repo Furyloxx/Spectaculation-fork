@@ -12,6 +12,8 @@ public class IslandCommand extends SCommand
     {
         if (sender instanceof ConsoleCommandSender) throw new CommandFailException("Console senders cannot use this command!");
         Player player = sender.getPlayer();
+        player.sendMessage("§7Warping to your Skyblock Island...");
+        player.sendMessage("§7Sending to server mini656W");
         PlayerUtils.sendToIsland(player);
     }
 }

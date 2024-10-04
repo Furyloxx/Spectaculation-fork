@@ -12,7 +12,7 @@ public class HubCommand extends SCommand{
 
     @Override
     public void run(CommandSource sender, String[] args) {
-        this.send(ChatColor.translateAlternateColorCodes('&' , "&7Sending you to the Hub..."));
+        this.send(ChatColor.translateAlternateColorCodes('&' , "&7Sending to server mega136...0"));
         Player player = sender.getPlayer();
         player.teleport(new Location(
                 Bukkit.getWorld(
