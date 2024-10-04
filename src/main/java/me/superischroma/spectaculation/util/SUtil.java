@@ -90,6 +90,24 @@ public class SUtil
             names.add(player.getName());
         return names;
     }
+    
+    public static String getFormattedNumber(double num, int iteration) {
+
+        if (num < 1000) {
+            return String.valueOf(num);
+        }
+
+        char[] c = new char[]{'k', 'M', 'B', 'T'};
+
+        double d = ((long) num / 100) / 10.0;
+        boolean isRound = (d * 10) %10 == 0;
+
+        return (d < 1000? //this determines the class, i.e. 'k', 'm' etc
+                ((d > 99.9 || isRound || (!isRound && d > 9.99)? //this decides whether to trim the decimals
+                        (int) d * 10 / 10 : d + "" // (int) d * 10 / 10 drops the decimal
+                ) + "" + c[iteration])
+                : getFormattedNumber(d, iteration+1));
+    }
 
     public static int random(int min, int max)
     {

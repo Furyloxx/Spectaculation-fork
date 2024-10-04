@@ -11,7 +11,9 @@ public enum EntityDropType
     RARE(ChatColor.GOLD),
     VERY_RARE(ChatColor.AQUA),
     EXTRAORDINARILY_RARE(ChatColor.DARK_PURPLE),
-    CRAZY_RARE(ChatColor.LIGHT_PURPLE);
+    CRAZY_RARE(ChatColor.LIGHT_PURPLE),
+    PRAY_RNGESUS(ChatColor.LIGHT_PURPLE),
+    RNGESUS_INCARNATE(ChatColor.DARK_RED);
 
     @Getter
     private final ChatColor color;
