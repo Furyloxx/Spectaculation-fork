@@ -204,6 +204,11 @@ public class TarantulaBroodfather extends EntitySpider implements SNMSEntity, En
     {
         return spawnerUUID;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 300.0;
+    }
 
     public static class TopCaveSpider implements EntityStatistics, EntityFunction
     {

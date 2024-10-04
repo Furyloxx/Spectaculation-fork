@@ -50,6 +50,11 @@ public class WeaverSpider extends BaseSpider
         {
             return 45.0;
         }
+        
+        @Override
+    public double getEntityLevel() {
+      return 5.0;
+    }
 
         @Override
         public double getXPDropped()

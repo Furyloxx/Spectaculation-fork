@@ -231,4 +231,9 @@ public class RevenantHorror extends EntityZombie implements SNMSEntity, EntityFu
     {
         return spawnerUUID;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 400.0;
+    }
 }

@@ -234,4 +234,9 @@ public class SvenPackmaster extends EntityWolf implements SNMSEntity, EntityFunc
     {
         return spawnerUUID;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 300.0;
+    }
 }
