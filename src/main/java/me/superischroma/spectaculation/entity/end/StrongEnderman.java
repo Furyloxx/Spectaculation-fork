@@ -18,7 +18,7 @@ public class StrongEnderman implements EndermanStatistics, EntityFunction
     
     @Override
     public double getEntityLevel() {
-      return 50.0;
+      return 50;
     }
 
     @Override

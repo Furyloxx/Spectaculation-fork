@@ -23,7 +23,7 @@ public class HowlingSpirit extends BaseWolf
     
     @Override
     public double getEntityLevel() {
-      return 35.0;
+      return 35;
     }
 
     @Override

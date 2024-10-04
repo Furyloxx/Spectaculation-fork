@@ -24,7 +24,7 @@ public class OldWolf extends BaseWolf
     
     @Override
     public double getEntityLevel() {
-      return 50.0;
+      return 50;
     }
 
     @Override

@@ -27,7 +27,7 @@ public class SpiderJockey extends BaseSpider implements JockeyStatistics
     
     @Override
     public double getEntityLevel() {
-      return 3.0;
+      return 3;
     }
 
     @Override
@@ -58,7 +58,7 @@ public class SpiderJockey extends BaseSpider implements JockeyStatistics
         
         @Override
     public double getEntityLevel() {
-      return 10.0;
+      return 10;
     }
 
         @Override

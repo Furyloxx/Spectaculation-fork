@@ -36,7 +36,7 @@ public class HighLevelSkeleton implements EntityStatistics, EntityFunction
     
     @Override
     public double getEntityLevel() {
-      return 7.0;
+      return 7;
     }
 
     @Override

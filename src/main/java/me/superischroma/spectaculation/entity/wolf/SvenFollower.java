@@ -25,7 +25,7 @@ public class SvenFollower extends BaseWolf
     
     @Override
     public double getEntityLevel() {
-      return 170.0;
+      return 170;
     }
 
     @Override

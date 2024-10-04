@@ -26,7 +26,7 @@ public class SpidersDenSkeleton implements EntityStatistics, EntityFunction
     
     @Override
     public double getEntityLevel() {
-      return 2.0;
+      return 2;
     }
 
     @Override

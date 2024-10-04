@@ -19,7 +19,7 @@ public class Silverfish implements EntityStatistics, EntityFunction
     
     @Override
     public double getEntityLevel() {
-      return 1.0;
+      return 1;
     }
 
     @Override

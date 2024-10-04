@@ -29,7 +29,7 @@ public class DeformedRevenant extends BaseZombie
     
     @Override
     public double getEntityLevel() {
-      return 300.0;
+      return 300;
     }
 
     @Override

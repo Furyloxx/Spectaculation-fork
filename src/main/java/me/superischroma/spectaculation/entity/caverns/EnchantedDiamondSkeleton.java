@@ -34,7 +34,7 @@ public class EnchantedDiamondSkeleton implements EntityStatistics, EntityFunctio
     
     @Override
     public double getEntityLevel() {
-      return 20.0;
+      return 20;
     }
 
     @Override

@@ -20,7 +20,7 @@ public class SplitterSpider extends BaseSpider
     
     @Override
     public double getEntityLevel() {
-      return 2.0;
+      return 2;
     }
 
     @Override

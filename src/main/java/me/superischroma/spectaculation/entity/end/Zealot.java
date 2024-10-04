@@ -37,7 +37,7 @@ public class Zealot implements EndermanStatistics, EntityFunction
     
     @Override
     public double getEntityLevel() {
-      return 55.0;
+      return 55;
     }
 
     @Override
@@ -90,7 +90,7 @@ public class Zealot implements EndermanStatistics, EntityFunction
         
         @Override
     public double getEntityLevel() {
-      return 55.0;
+      return 55;
     }
 
         @Override
@@ -140,7 +140,7 @@ public class Zealot implements EndermanStatistics, EntityFunction
         
         @Override
     public double getEntityLevel() {
-      return 55.0;
+      return 55;
     }
 
         @Override

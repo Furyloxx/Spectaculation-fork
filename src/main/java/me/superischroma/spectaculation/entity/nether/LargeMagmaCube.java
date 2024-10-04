@@ -36,7 +36,7 @@ public class LargeMagmaCube implements SlimeStatistics, EntityFunction
     
     @Override
     public double getEntityLevel() {
-      return 15.0;
+      return 15;
     }
 
     @Override

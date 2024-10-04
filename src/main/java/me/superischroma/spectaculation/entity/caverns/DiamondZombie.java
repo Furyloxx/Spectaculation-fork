@@ -25,7 +25,7 @@ public class DiamondZombie extends BaseZombie
     
     @Override
     public double getEntityLevel() {
-      return 15.0;
+      return 15;
     }
 
     @Override

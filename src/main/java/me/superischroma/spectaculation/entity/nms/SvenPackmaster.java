@@ -237,6 +237,6 @@ public class SvenPackmaster extends EntityWolf implements SNMSEntity, EntityFunc
     
     @Override
     public double getEntityLevel() {
-      return 300.0;
+      return 300;
     }
 }

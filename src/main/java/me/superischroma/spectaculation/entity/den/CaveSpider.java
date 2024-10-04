@@ -16,7 +16,7 @@ public class CaveSpider extends BaseSpider
     
     @Override
     public double getEntityLevel() {
-      return 6.0;
+      return 6;
     }
 
     @Override

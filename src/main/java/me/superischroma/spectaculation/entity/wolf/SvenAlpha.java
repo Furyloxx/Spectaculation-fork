@@ -25,7 +25,7 @@ public class SvenAlpha extends BaseWolf
     
     @Override
     public double getEntityLevel() {
-      return 340.0;
+      return 340;
     }
 
     @Override

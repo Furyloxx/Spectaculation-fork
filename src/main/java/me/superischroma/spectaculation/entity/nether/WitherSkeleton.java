@@ -27,7 +27,7 @@ public class WitherSkeleton implements SkeletonStatistics, EntityFunction
     
     @Override
     public double getEntityLevel() {
-      return 70.0;
+      return 70;
     }
 
     @Override

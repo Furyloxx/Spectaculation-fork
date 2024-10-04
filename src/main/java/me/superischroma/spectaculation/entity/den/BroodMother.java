@@ -21,7 +21,7 @@ public class BroodMother extends BaseSpider
     
     @Override
     public double getEntityLevel() {
-      return 12.0;
+      return 12;
     }
 
     @Override

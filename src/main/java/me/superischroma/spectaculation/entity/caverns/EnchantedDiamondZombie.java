@@ -29,7 +29,7 @@ public class EnchantedDiamondZombie extends BaseZombie
     
     @Override
     public double getEntityLevel() {
-      return 20.0;
+      return 20;
     }
 
     @Override

@@ -25,7 +25,7 @@ public class TarantulaBeast extends BaseSpider
     
     @Override
     public double getEntityLevel() {
-      return 180.0;
+      return 180;
     }
 
     @Override

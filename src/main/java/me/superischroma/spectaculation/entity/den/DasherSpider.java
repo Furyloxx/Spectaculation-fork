@@ -16,7 +16,7 @@ public class DasherSpider extends BaseSpider
     
     @Override
     public double getEntityLevel() {
-      return 4.0;
+      return 4;
     }
 
     @Override

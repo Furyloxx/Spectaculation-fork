@@ -23,7 +23,7 @@ public class SpidersDenSlime implements SlimeStatistics, EntityFunction
     
     @Override
     public double getEntityLevel() {
-      return 8.0;
+      return 8;
     }
 
     @Override

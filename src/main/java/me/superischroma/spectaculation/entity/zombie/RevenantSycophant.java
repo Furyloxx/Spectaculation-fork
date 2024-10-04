@@ -27,7 +27,7 @@ public class RevenantSycophant extends BaseZombie
     
     @Override
     public double getEntityLevel() {
-      return 70.0;
+      return 70;
     }
 
     @Override
