@@ -5,7 +5,7 @@ import me.superischroma.spectaculation.entity.SEntityType;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
-@CommandParameters(description = "Spawn a mob from Spec.", aliases = "sp", permission = "spt.spawn")
+@CommandParameters(description = "Spawn a mob from Spec.", aliases = "spawn", permission = "spt.spawn")
 public class SpawnSpecCommand extends SCommand
 {
     @Override

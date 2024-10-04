@@ -19,22 +19,22 @@
 - Reforges
 - pets
 - Economy
-- Mining
+- Mining without regeneration system 😗
 
 ## Commands :
 - `/ib`
 
-- `/spawnspec <name>`
+- `/spawn <name>`
 
 - `/coins <add , remove , set> <value>`
 
-- `/specreforge <name>`
+- `/ref <name>`
 
 - `/ah`
 
 - `/visit <name>`
 
-- `/specenchantment <name> <level>`
+- `/ench <name> <level>`
 
 - `/is`
 

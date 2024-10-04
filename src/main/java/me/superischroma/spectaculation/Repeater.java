@@ -163,7 +163,7 @@ public class Repeater
 
                     // Sidebar
                     Sidebar sidebar = new Sidebar("" + ChatColor.YELLOW + ChatColor.BOLD + Spectaculation.getPlugin().serverName, "SKYBLOCK");
-                    sidebar.add(ChatColor.GRAY + SUtil.getDate() + "mini674IDK");
+                    sidebar.add(ChatColor.GRAY + SUtil.getDate() + " mega654");
                     sidebar.add("  ");
                     sidebar.add(" " + SkyBlockCalendar.getMonthName() + " " + SUtil.ntify(SkyBlockCalendar.getDay()));
                     boolean day = true;

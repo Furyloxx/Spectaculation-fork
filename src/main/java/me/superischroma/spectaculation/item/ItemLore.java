@@ -59,7 +59,7 @@ public class ItemLore
             boolean critDamage = addPossiblePropertyInt("Crit Damage", (int) (playerBoostStatistics.getBaseCritDamage() * 100),
                     (int) (reforge.getCritDamage().getForRarity(parent.getRarity()) * 100), "%", false, lore);
             if (damage || strength || critChance || critDamage) lore.add("");
-            boolean health = addPossiblePropertyInt("Health", playerBoostStatistics.getBaseHealth(), " HP", true, lore);
+            boolean health = addPossiblePropertyInt("Health", playerBoostStatistics.getBaseHealth(), "", true, lore);
             boolean defense = addPossiblePropertyInt("Defense", playerBoostStatistics.getBaseDefense(), "", true, lore);
             boolean speed = addPossiblePropertyInt("Speed", (int) (playerBoostStatistics.getBaseSpeed() * 100), "", true, lore);
             boolean intelligence = addPossiblePropertyInt("Intelligence", playerBoostStatistics.getBaseIntelligence(),

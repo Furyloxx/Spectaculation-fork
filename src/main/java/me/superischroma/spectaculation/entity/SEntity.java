@@ -122,7 +122,7 @@ public class SEntity // 3, 4, 5
             {
                 public void run()
                 {
-                    entity.setCustomName(ChatColor.GRAY + "[Lv"  + statistics.getEntityLevel() + ChatColor.GRAY + "] " + ChatColor.RED + statistics.getEntityName() + " " + ChatColor.GREEN + (int) entity.getHealth() +
+                    entity.setCustomName(ChatColor.GRAY + "[Lv"  + (int) statistics.getEntityLevel() + ChatColor.GRAY + "] " + ChatColor.RED + statistics.getEntityName() + " " + ChatColor.GREEN + (int) entity.getHealth() +
                             ChatColor.WHITE + "/" + ChatColor.GREEN + (int) entity.getMaxHealth() + ChatColor.RED + "❤");
                 }
             }.runTaskTimer(Spectaculation.getPlugin(), 0, 10);
