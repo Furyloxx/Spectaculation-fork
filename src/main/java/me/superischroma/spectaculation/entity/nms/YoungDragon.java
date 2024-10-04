@@ -34,4 +34,9 @@ public class YoungDragon extends Dragon
     {
         return 1600.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 1.0;
+    }
 }

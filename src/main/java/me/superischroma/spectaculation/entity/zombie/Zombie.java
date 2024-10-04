@@ -19,6 +19,11 @@ public class Zombie extends BaseZombie
     {
         return 100.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 1.0;
+    }
 
     @Override
     public double getDamageDealt()

@@ -21,6 +21,11 @@ public class ZombieVillager extends BaseZombie
     {
         return 120.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 1.0;
+    }
 
     @Override
     public double getDamageDealt()

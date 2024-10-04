@@ -19,6 +19,11 @@ public class Wolf extends BaseWolf
     {
         return 250.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 15.0;
+    }
 
     @Override
     public double getDamageDealt()

@@ -34,6 +34,11 @@ public class Zealot implements EndermanStatistics, EntityFunction
     {
         return 13000.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 55.0;
+    }
 
     @Override
     public double getDamageDealt()

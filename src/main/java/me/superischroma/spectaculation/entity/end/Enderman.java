@@ -15,6 +15,11 @@ public class Enderman implements EndermanStatistics, EntityFunction
     {
         return 6000.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 45.0;
+    }
 
     @Override
     public double getDamageDealt()

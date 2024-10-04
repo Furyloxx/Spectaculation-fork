@@ -24,6 +24,11 @@ public class Watcher implements EntityFunction, EntityStatistics
     {
         return 9500.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 55.0;
+    }
 
     @Override
     public double getDamageDealt()

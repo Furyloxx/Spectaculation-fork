@@ -34,4 +34,9 @@ public class StrongDragon extends Dragon
     {
         return 1700.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 1.0;
+    }
 }

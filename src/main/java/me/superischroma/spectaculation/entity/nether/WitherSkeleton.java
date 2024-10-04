@@ -22,7 +22,12 @@ public class WitherSkeleton implements SkeletonStatistics, EntityFunction
     @Override
     public double getEntityMaxHealth()
     {
-        return 250.0;
+        return 600000.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 70.0;
     }
 
     @Override

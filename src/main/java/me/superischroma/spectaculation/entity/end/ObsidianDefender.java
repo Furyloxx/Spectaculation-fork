@@ -32,6 +32,11 @@ public class ObsidianDefender implements EntityFunction, EntityStatistics
     {
         return 10000.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 55.0;
+    }
 
     @Override
     public double getDamageDealt()

@@ -14,7 +14,12 @@ public class SmallMagmaCube implements SlimeStatistics, EntityFunction
     @Override
     public double getEntityMaxHealth()
     {
-        return 200.0;
+        return 100.0;
+    }
+    
+    @Override
+    public double getEntityLevel() {
+      return 5.0;
     }
 
     @Override

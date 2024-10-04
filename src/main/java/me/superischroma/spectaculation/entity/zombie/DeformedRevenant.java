@@ -26,6 +26,11 @@ public class DeformedRevenant extends BaseZombie
     {
         return 360000;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 300.0;
+    }
 
     @Override
     public double getDamageDealt()

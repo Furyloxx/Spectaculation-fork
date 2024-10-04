@@ -33,4 +33,9 @@ public class WiseDragon extends Dragon
     {
         return 1200.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 1.0;
+    }
 }

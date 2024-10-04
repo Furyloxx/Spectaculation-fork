@@ -15,6 +15,11 @@ public class WeakEnderman implements EndermanStatistics, EntityFunction
     {
         return 4500.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 42.0;
+    }
 
     @Override
     public double getDamageDealt()

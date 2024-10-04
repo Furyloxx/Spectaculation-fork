@@ -21,6 +21,11 @@ public class SoulOfTheAlpha extends BaseWolf
     {
         return 31150.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 55.0;
+    }
 
     @Override
     public double getDamageDealt()

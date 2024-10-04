@@ -56,3 +56,12 @@ A fork of the Spectaculation Hypixel SkyBlock plugin, originally coded by Super,
 ## Stuff done by me:
 - Pat NPC & GUI
 - Entity Leveling System
+ 
+
+
+### Dev Stuff
+```java
+@Override
+    public double getEntityLevel() {
+      return ;
+    }```

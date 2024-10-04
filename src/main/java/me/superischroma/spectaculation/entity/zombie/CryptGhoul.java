@@ -19,7 +19,7 @@ public class CryptGhoul extends BaseZombie
     @Override
     public double getEntityLevel() 
     {
-      return 10;
+      return 30;
     }
 
     @Override

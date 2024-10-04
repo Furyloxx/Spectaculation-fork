@@ -21,6 +21,11 @@ public class PackEnforcer extends BaseWolf
     {
         return 45000.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 100.0;
+    }
 
     @Override
     public double getDamageDealt()

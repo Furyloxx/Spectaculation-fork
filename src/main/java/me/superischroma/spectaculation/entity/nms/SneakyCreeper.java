@@ -42,6 +42,11 @@ public class SneakyCreeper extends EntityCreeper implements EntityStatistics, SN
     {
         return 120.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 3.0;
+    }
 
     @Override
     public double getDamageDealt()

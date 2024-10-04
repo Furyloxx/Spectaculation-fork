@@ -25,6 +25,11 @@ public class RevenantChampion extends BaseZombie
     {
         return 90000;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 150.0;
+    }
 
     @Override
     public double getDamageDealt()

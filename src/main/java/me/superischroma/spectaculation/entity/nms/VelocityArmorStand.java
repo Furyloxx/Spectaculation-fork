@@ -37,6 +37,11 @@ public class VelocityArmorStand extends EntityArmorStand implements EntityStatis
     {
         return null;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 1.0;
+    }
 
     @Override
     public double getEntityMaxHealth()

@@ -22,6 +22,11 @@ public class GoldenGhoul extends BaseZombie
     {
         return 45000.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 60.0;
+    }
 
     @Override
     public double getDamageDealt()

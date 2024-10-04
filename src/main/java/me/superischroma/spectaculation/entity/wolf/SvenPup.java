@@ -35,6 +35,11 @@ public class SvenPup extends BaseWolf
     {
         return health;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 170;
+    }
 
     @Override
     public double getDamageDealt()

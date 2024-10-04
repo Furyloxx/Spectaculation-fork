@@ -20,6 +20,11 @@ public class PackSpirit extends BaseWolf
     {
         return 6000.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 30.0;
+    }
 
     @Override
     public double getDamageDealt()

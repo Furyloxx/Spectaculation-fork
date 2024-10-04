@@ -35,6 +35,11 @@ public class UncollidableArmorStand extends EntityArmorStand implements EntitySt
     {
         return 1.0;
     }
+    
+    @Override
+    public double getEntityLevel() {
+      return 1.0;
+    }
 
     @Override
     public double getDamageDealt()
