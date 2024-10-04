@@ -1,6 +1,6 @@
 package me.superischroma.spectaculation.command;
 
-@CommandParameters(description = "The main command for Spectaculation.", aliases = "spt")
+@CommandParameters(description = "The main command for Detroitx.", aliases = "dtx")
 public class SpectaculationCommand extends SCommand
 {
     @Override

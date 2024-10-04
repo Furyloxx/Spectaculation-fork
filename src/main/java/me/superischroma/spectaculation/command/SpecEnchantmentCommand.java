@@ -6,7 +6,7 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-@CommandParameters(description = "Adds an enchantment from Spec to the specified item.", aliases = "sench", permission = "spt.item")
+@CommandParameters(description = "Adds an enchantment from Spec to the specified item.", aliases = "ench", permission = "spt.item")
 public class SpecEnchantmentCommand extends SCommand
 {
     @Override

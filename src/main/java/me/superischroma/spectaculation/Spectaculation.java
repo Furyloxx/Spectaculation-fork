@@ -173,7 +173,7 @@ public final class Spectaculation extends JavaPlugin
                     specShapeless.add(SMaterial.getSpecEquivalent(stack.getType(), stack.getDurability()), stack.getAmount());
             }
         }
-        this.ip = (config.getString("ip") != null) ? config.getString("ip") : "mc.hypixel.net";
+        this.ip = (config.getString("ip") != null) ? config.getString("ip") : "mc.skypixel.net";
         this.serverName = (config.getString("name") != null) ? config.getString("name") : "SKYBLOCK";
         SLog.info("Enabled " + this.getDescription().getFullName());
     }

@@ -5,7 +5,7 @@ import me.superischroma.spectaculation.util.SUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
 
-@CommandParameters(description = "Get your current active potion effects.", aliases = "seff", permission = "spt.item")
+@CommandParameters(description = "Get your current active potion effects.", aliases = "eff", permission = "spt.item")
 public class SpecEffectsCommand extends SCommand
 {
     @Override

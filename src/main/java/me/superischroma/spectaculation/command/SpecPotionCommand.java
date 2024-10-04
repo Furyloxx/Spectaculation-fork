@@ -7,7 +7,7 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-@CommandParameters(description = "Adds an potion from Spec to the specified item.", aliases = "spot", permission = "spt.item")
+@CommandParameters(description = "Adds an potion from Detroitx to the specified item.", aliases = "pot", permission = "spt.item")
 public class SpecPotionCommand extends SCommand
 {
     @Override
