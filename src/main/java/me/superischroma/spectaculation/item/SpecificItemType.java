@@ -20,7 +20,15 @@ public enum SpecificItemType
     DUNGEON_ITEM,
     NONE,
     ROD(false),
-    ARROW_POISON;
+    ARROW_POISON,
+    REWARD_HELMET,
+    DUNGEON_HELMET,
+    DUNGEON_CHESTPLATE,
+    DUNGEON_LEGGINGS,
+    DUNGEON_BOOTS,
+    DUNGEON_SWORD,
+    REFORGE_STONE,
+    QUEST_ITEM;
 
     @Getter
     private final boolean stackable;
