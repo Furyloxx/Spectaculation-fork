@@ -550,7 +550,6 @@ public final class PlayerUtils
             config.set("islands.z", zOffset);
             config.save();
             long end = System.currentTimeMillis() - start;
-            player.sendMessage(ChatColor.AQUA + "[SkyBlock] :" + ChatColor.RESET + " Generated island! This took "  + ChatColor.YELLOW + end + "ms");
         }
 
 

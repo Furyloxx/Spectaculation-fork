@@ -18,7 +18,7 @@ public class VisitGUI extends GUI{
                 Player player = (Player) e.getWhoClicked();
                 OfflinePlayer targetPlayer = Bukkit.getOfflinePlayer(target);
                 player.teleport(PlayerUtils.getIslandLocation(targetPlayer.getUniqueId()));
-                player.sendMessage(ChatColor.AQUA + "[SkyBlock] " + ChatColor.GRAY + "Teleported to " + ChatColor.YELLOW + target + ChatColor.GRAY + "'s island " + ChatColor.GREEN + "successfully!");
+                player.sendMessage(ChatColor.GRAY + "Teleported to " + ChatColor.YELLOW + target + ChatColor.GRAY + "'s island " + ChatColor.GREEN + "successfully!");
 
 
             }
