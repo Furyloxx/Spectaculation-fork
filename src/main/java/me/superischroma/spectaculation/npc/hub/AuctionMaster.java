@@ -9,16 +9,16 @@ import net.skypixel.mortar.npc.NPCMeta;
 import java.util.Arrays;
 
 public class AuctionMaster extends MortarNPC {
-    public BankerNPC() {
+    public AuctionMaster() {
         super(new NPCMeta() {
             @Override
             public String getName() {
-                return "hub_banker";
+                return "hub_ah_master";
             }
 
             @Override
             public int getId() {
-                return 1;
+                return 2;
             }
 
             @Override
