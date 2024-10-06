@@ -14,3 +14,7 @@
 [+] Bat Artifact Talisman
 [+] Artifact Of Control
 [+] Florida Man Mob
+[Fix] Regions 
+
+07/10/2024
+-

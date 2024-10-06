@@ -1,29 +1,64 @@
 package me.superischroma.spectaculation.region;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.bukkit.Location;
 
-@Getter
 public class RegionGenerator
 {
     private final String modificationType;
-    @Setter
     private String name;
-    @Setter
     private Location firstLocation;
-    @Setter
     private Location secondLocation;
-    @Setter
     private RegionType type;
-    @Setter
     private int phase;
-
-    public RegionGenerator(String modificationType, String name, RegionType type)
-    {
+    
+    public RegionGenerator(final String modificationType, final String name, final RegionType type) {
         this.modificationType = modificationType;
         this.name = name;
         this.type = type;
         this.phase = 1;
+    }
+    
+    public String getModificationType() {
+        return this.modificationType;
+    }
+    
+    public String getName() {
+        return this.name;
+    }
+    
+    public Location getFirstLocation() {
+        return this.firstLocation;
+    }
+    
+    public Location getSecondLocation() {
+        return this.secondLocation;
+    }
+    
+    public RegionType getType() {
+        return this.type;
+    }
+    
+    public int getPhase() {
+        return this.phase;
+    }
+    
+    public void setName(final String name) {
+        this.name = name;
+    }
+    
+    public void setFirstLocation(final Location firstLocation) {
+        this.firstLocation = firstLocation;
+    }
+    
+    public void setSecondLocation(final Location secondLocation) {
+        this.secondLocation = secondLocation;
+    }
+    
+    public void setType(final RegionType type) {
+        this.type = type;
+    }
+    
+    public void setPhase(final int phase) {
+        this.phase = phase;
     }
 }

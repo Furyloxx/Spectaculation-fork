@@ -13,13 +13,13 @@ public class FloridaMan extends BaseZombie
     @Override
     public String getEntityName()
     {
-        return "Zombie Villager";
+        return "Florida Man";
     }
 
     @Override
     public double getEntityMaxHealth()
     {
-        return 120000000000000000000000000.0;
+        return 120000000.0;
     }
     
     @Override
