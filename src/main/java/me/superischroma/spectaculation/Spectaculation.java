@@ -26,8 +26,10 @@ import me.superischroma.spectaculation.slayer.SlayerQuest;
 import me.superischroma.spectaculation.user.AuctionSettings;
 import me.superischroma.spectaculation.user.User;
 import me.superischroma.spectaculation.util.*;
+import net.skypixel.mortar.MortarLibrary;
+import net.skypixel.mortar.command.CommandRegistry;
 import net.skypixel.mortar.npc.NPCRegistry;
-import me.superischroma.spectaculation.npc.*;
+import me.superischroma.spectaculation.npc.hub.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -64,6 +66,10 @@ public final class Spectaculation extends JavaPlugin
     private static NPCRegistry npcRegistry;
     @Getter
     public String ip;
+     @Getter
+    private static MortarLibrary mortar;
+    @Getter
+    private static CommandRegistry commandRegistry;
     @Getter
     public String serverName;
     public SQLRegionData regionData;
