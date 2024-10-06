@@ -1,3 +1,4 @@
 - Ranks
 - Tablist
-- More Item Abilities
+- More Items & Abilities
+- Farming Update

@@ -1,6 +1,7 @@
 package me.superischroma.spectaculation.listener;
 
 import com.google.common.util.concurrent.AtomicDouble;
+import net.skypixel.mortar.npc.MortarNPC;
 import me.superischroma.spectaculation.Spectaculation;
 import me.superischroma.spectaculation.enchantment.Enchantment;
 import me.superischroma.spectaculation.enchantment.EnchantmentType;
@@ -111,6 +112,7 @@ public class PlayerListener extends PListener
             skill.onSkillUpdate(user, user.getSkillXP(skill));
         }
        new PacketReader().injectPlayer(player);
+        Spectaculation.getNpcRegistry().spawnAll(player);
     }
 
     @EventHandler
@@ -126,6 +128,7 @@ public class PlayerListener extends PListener
             quest.setDied(System.currentTimeMillis());
         }
         user.save();
+       Spectaculation.getNpcRegistry().despawnAll(player);
     }
 
     @EventHandler

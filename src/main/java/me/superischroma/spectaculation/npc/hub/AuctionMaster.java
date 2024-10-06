@@ -74,6 +74,7 @@ public class AuctionMaster extends MortarNPC {
 
     @Override
     public void onInteract(NPCInteractionEvent event) {
+      
         speak(event.getPlayer(), Arrays.asList(
                 "Hey there, I'm the Auction Master.",
                 "At the auction house you can put your valuable items up for auction!",
