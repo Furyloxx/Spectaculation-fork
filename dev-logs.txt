@@ -3,6 +3,7 @@ Before Stuffs
 [+] Mob Health Bug Fixed (the .0 heath bug)
 [+] NPC System 
 [+] BankerNPC
+[+] Islands
 
 06/10/2024 - 
 [+] Added AuctionMaster NPC
