@@ -1,0 +1,14 @@
+Before Stuffs
+[+] Mob Leveling System & health formatter
+[+] NPC System 
+[+] BankerNPC
+
+06/10/2024 - 
+[+] Added AuctionMaster NPC
+[Fix] BankerNPC Skin
+[+] Dante Talisman
+[+] Sloth Hat Of Celebration Talisman
+[+] Crab Hat Of Celebration Talisman 
+[+] Candy Relic Talisman 
+[+] Bat Artifact
+[+] Artifact Of Control
