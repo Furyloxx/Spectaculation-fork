@@ -5,7 +5,7 @@ import me.superischroma.spectaculation.util.SUtil;
 import net.skypixel.mortar.npc.MortarNPC;
 import net.skypixel.mortar.npc.NPCInteractionEvent;
 import net.skypixel.mortar.npc.NPCMeta;
-
+import org.bukkit.ChatColor;
 import java.util.Arrays;
 
 public class AuctionMaster extends MortarNPC {
