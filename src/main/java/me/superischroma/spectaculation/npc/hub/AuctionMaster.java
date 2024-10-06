@@ -1,6 +1,5 @@
 package me.superischroma.spectaculation.npc.hub;
 
-import me.superischroma.spectaculation.gui.BankerGUI;
 import me.superischroma.spectaculation.util.SUtil;
 import net.skypixel.mortar.npc.MortarNPC;
 import net.skypixel.mortar.npc.NPCInteractionEvent;

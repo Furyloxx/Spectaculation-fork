@@ -1,5 +1,3 @@
-# Supported Server Version : 1.8.8
-
 ## Features :
 
 - Auction System
