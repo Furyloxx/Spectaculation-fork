@@ -1,5 +1,6 @@
 Before Stuffs
 [+] Mob Leveling System & health formatter
+[+] Mob Health Bug Fixed (the .0 heath bug)
 [+] NPC System 
 [+] BankerNPC
 
