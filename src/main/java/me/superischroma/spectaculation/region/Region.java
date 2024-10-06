@@ -19,7 +19,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.block.BlockState;
 import java.util.List;
 import org.bukkit.Location;
-import net.superischroma.spectaculation.Spectaculation;
+import me.superischroma.spectaculation.Spectaculation;
 import java.util.Map;
 
 public class Region
