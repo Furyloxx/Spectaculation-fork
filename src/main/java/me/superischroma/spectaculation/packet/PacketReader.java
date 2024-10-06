@@ -3,9 +3,6 @@ package me.superischroma.spectaculation.packet;
 import io.netty.channel.ChannelDuplexHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPipeline;
-import me.superischroma.spectaculation.event.PlayerClickNPCEvent;
-import me.superischroma.spectaculation.npc.SkyblockNPC;
-import me.superischroma.spectaculation.npc.SkyblockNPCManager;
 import net.minecraft.server.v1_8_R3.Packet;
 import net.minecraft.server.v1_8_R3.PacketPlayInUseEntity;
 import org.bukkit.Bukkit;
@@ -26,7 +23,6 @@ public class PacketReader {
                 if(packet instanceof PacketPlayInUseEntity) {
                     try {
                         PacketPlayInUseEntity packetPlayInUseEntity = (PacketPlayInUseEntity) packet;
-                        readPacket(packetPlayInUseEntity,player);
                     }
                     catch (Exception e) {
                         e.printStackTrace();
@@ -43,25 +39,6 @@ public class PacketReader {
         ChannelPipeline pipeline = ((CraftPlayer)player).getHandle().playerConnection.networkManager.channel.pipeline();
         pipeline.addBefore("packet_handler", player.getName(), channelDuplexHandler);
 
-    }
-
-    public void readPacket(Packet<?> packet, Player p) {
-        if (packet.getClass().getSimpleName().equalsIgnoreCase("PacketPlayInUseEntity")) {
-            PacketPlayInUseEntity pack = (PacketPlayInUseEntity) packet;
-            int id = (int) getValue(packet, "a");
-            if (getValue(packet, "action").toString().equalsIgnoreCase("interact")) {
-                for (SkyblockNPC npc : SkyblockNPCManager.getNPCS()) {
-                    if (npc.getEntityID() == id) {
-                        PlayerClickNPCEvent event = new PlayerClickNPCEvent(p, npc);
-                        Bukkit.getServer().getPluginManager().callEvent(event);
-                        if (event.isCancelled()) {
-                            return;
-                        }
-                        npc.getParameters().onInteract(p, npc);
-                    }
-                }
-            }
-        }
     }
 
 

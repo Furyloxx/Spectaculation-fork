@@ -19,8 +19,6 @@ import me.superischroma.spectaculation.listener.PlayerListener;
 import me.superischroma.spectaculation.listener.ServerPingListener;
 import me.superischroma.spectaculation.listener.WorldListener;
 import me.superischroma.spectaculation.merchant.MerchantItemHandler;
-import me.superischroma.spectaculation.npc.SkyblockNPC;
-import me.superischroma.spectaculation.npc.SkyblockNPCManager;
 import me.superischroma.spectaculation.region.Region;
 import me.superischroma.spectaculation.region.RegionType;
 import me.superischroma.spectaculation.sql.*;
@@ -28,6 +26,8 @@ import me.superischroma.spectaculation.slayer.SlayerQuest;
 import me.superischroma.spectaculation.user.AuctionSettings;
 import me.superischroma.spectaculation.user.User;
 import me.superischroma.spectaculation.util.*;
+import net.skypixel.mortar.npc.NPCRegistry;
+import me.superischroma.spectaculation.npc.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -61,6 +61,8 @@ public final class Spectaculation extends JavaPlugin
     public SQLDatabase sql;
 
     @Getter
+    private static NPCRegistry npcRegistry;
+    @Getter
     public String ip;
     @Getter
     public String serverName;
@@ -81,6 +83,11 @@ public final class Spectaculation extends JavaPlugin
     public void onEnable()
     {
         plugin = this;
+                mortar = MortarLibrary.link(this);
+
+        commandRegistry = mortar.getCommandRegistry();
+        npcRegistry = mortar.getNpcRegistry();
+        
         SLog.info("Loading islands...");
         loadIslandWorld();
         saveResource("private_island.schematic" , true); // copy island schematic to plugin folder
@@ -113,6 +120,7 @@ public final class Spectaculation extends JavaPlugin
         SLog.info("Loading listeners...");
         loadListeners();
         SLog.info("Registering NPCs...");
+         loadNPCs();
         SLog.info("Starting entity spawners...");
         EntitySpawner.startSpawnerTask();
         SLog.info("Establishing player regions...");
@@ -181,6 +189,7 @@ public final class Spectaculation extends JavaPlugin
     @Override
     public void onDisable()
     {
+      npcRegistry = null;
         SLog.info("Killing all non-human entities...");
         for (World world : Bukkit.getWorlds())
         {
@@ -314,5 +323,10 @@ public final class Spectaculation extends JavaPlugin
         ConfigurationSerialization.registerClass(AuctionEscrow.class, "AuctionEscrow");
         ConfigurationSerialization.registerClass(SerialNBTTagCompound.class, "SerialNBTTagCompound");
         ConfigurationSerialization.registerClass(AuctionBid.class, "AuctionBid");
+    }
+     public void loadNPCs() {
+        SLog.info("Registering mortar npcs");
+        npcRegistry.register(new BankerNPC(), false);
+        npcRegistry.startTasks();
     }
 }
