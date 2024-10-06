@@ -333,6 +333,7 @@ public final class Spectaculation extends JavaPlugin
      public void loadNPCs() {
         SLog.info("Registering mortar npcs");
         npcRegistry.register(new BankerNPC(), false);
+        npcRegistry.register(new AuctionMaster(), false);
         npcRegistry.startTasks();
     }
 }

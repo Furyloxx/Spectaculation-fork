@@ -150,6 +150,12 @@ public enum SMaterial
     HARDENED_DIAMOND_LEGGINGS(Material.DIAMOND_LEGGINGS, HardenedDiamondLeggings.class),
     HARDENED_DIAMOND_BOOTS(Material.DIAMOND_BOOTS, HardenedDiamondBoots.class),
     // Accessories
+    DANTE_TALISMAN(Material.SKULL_ITEM, DanteTalisman.class),
+    SLOTH_HAT_OF_CELEBRATION(Material.SKULL_ITEM, SlothHatOfCelebration.class),
+    CRAB_HAT_OF_CELEBRATION(Material.SKULL_ITEM, CrabHatOfCelebration.class),
+    CANDY_RELIC(Material.SKULL_ITEM, CandyRelic.class),
+    BAT_ARTIFACT(Material.SKULL_ITEM, BatArtifact.class),
+    ARTIFACT_OF_CONTROL(Material.SKULL_ITEM, ArtifactOfControl.class),
     SUPERSPEED_TALISMAN(Material.SKULL_ITEM, SuperspeedTalisman.class),
     BLANK_TALISMAN(Material.SKULL_ITEM, BlankTalisman.class),
     AUTO_RECOMBOBULATOR(Material.SKULL_ITEM, AutoRecombobulator.class),
