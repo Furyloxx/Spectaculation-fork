@@ -46,4 +46,4 @@
 
 - `/region [create <name> <type> | update <name> [type] | delete <name>]`
 
-- `/spot`
+- `/pot`
