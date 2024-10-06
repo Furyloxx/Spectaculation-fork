@@ -81,7 +81,7 @@ public enum SEntityType
     ZOMBIE_VILLAGER(EntityType.ZOMBIE, ZombieVillager.class),
     CRYPT_GHOUL(EntityType.ZOMBIE, CryptGhoul.class),
     GOLDEN_GHOUL(EntityType.ZOMBIE, GoldenGhoul.class),
-    FLORIDA_MAN(EntityType.Zombie, Florida_Man.class),
+    FLORIDA_MAN(EntityType.ZOMBIE, FloridaMan.class),
     WOLF(EntityType.WOLF, Wolf.class),
     OLD_WOLF(EntityType.WOLF, OldWolf.class),
     PACK_SPIRIT(EntityType.WOLF, PackSpirit.class),
