@@ -2,54 +2,61 @@ package me.superischroma.spectaculation.sql;
 
 import me.superischroma.spectaculation.Spectaculation;
 
-import java.lang.Object;
-import java.sql.SQLException;
-import java.sql.DriverManager;
-import java.io.IOException;
-import java.io.File;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.io.File;
+import java.io.IOException;
 
-public class SQLDatabase
-{
-    private static final Spectaculation plugin;
+public class SQLDatabase {
+    private final Spectaculation plugin;
     private static final String DATABASE_FILENAME = "database.db";
     private Connection connection;
     private final File file;
-    
-    public SQLDatabase() {
-        final File file = new File(SQLDatabase.plugin.getDataFolder(), "database.db");
-        if (!file.exists()) {
+
+    public SQLDatabase(Spectaculation plugin) {
+        this.plugin = plugin;
+        this.file = new File(this.plugin.getDataFolder(), DATABASE_FILENAME);
+
+        if (!this.file.exists()) {
             try {
-                file.getParentFile().mkdirs();
-                file.createNewFile();
-                SQLDatabase.plugin.saveResource("database.db", false);
-            }
-            catch (final IOException ex) {
+                this.file.getParentFile().mkdirs();
+                this.file.createNewFile();
+                this.plugin.saveResource(DATABASE_FILENAME, false);
+            } catch (IOException ex) {
                 ex.printStackTrace();
             }
         }
-        this.file = file;
     }
-    
+
     public Connection getConnection() {
-        try {
-            Class.forName("org.sqlite.JDBC");
-            final Connection connection = DriverManager.getConnection("jdbc:sqlite:" + this.file.getAbsolutePath());
-            if (connection != null) {
-                connection.prepareStatement("CREATE TABLE IF NOT EXISTS `worlds` (\n\t`id` SMALLINT,\n\t`name` TEXT\n);").execute();
-                connection.prepareStatement("CREATE TABLE IF NOT EXISTS `users` (\n\t`id` INT,\n\t`uuid` TINYTEXT\n);").execute();
-                connection.prepareStatement("CREATE TABLE IF NOT EXISTS `regions` (\n\t`name` TINYTEXT,\n\t`x1` INT,\n\t`y1` INT,\n\t`z1` INT,\n\t`x2` INT,\n\t`y2` INT,\n\t`z2` INT,\n\t`world` SMALLINT,\n\t`type` TINYTEXT\n);").execute();
-                connection.prepareStatement("CREATE TABLE IF NOT EXISTS `launchers` (\n\t`region_name` TINYTEXT,\n\t`x` INT,\n\t`y` INT,\n\t`z` INT\n);").execute();
-                return connection;
+        if (this.connection == null || !isValidConnection()) {
+            try {
+                Class.forName("org.sqlite.JDBC");
+                this.connection = DriverManager.getConnection("jdbc:sqlite:" + this.file.getAbsolutePath());
+                initializeTables();
+            } catch (SQLException | ClassNotFoundException ex) {
+                ex.printStackTrace();
             }
         }
-        catch (final SQLException | ClassNotFoundException ex) {
-            ex.printStackTrace();
-        }
-        return null;
+        return this.connection;
     }
-    
-    static {
-        plugin = Spectaculation.getPlugin();
+
+    private boolean isValidConnection() {
+        try {
+            return this.connection != null && !this.connection.isClosed();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private void initializeTables() throws SQLException {
+        if (this.connection != null) {
+            this.connection.prepareStatement("CREATE TABLE IF NOT EXISTS `worlds` (`id` INTEGER, `name` TEXT);").execute();
+            this.connection.prepareStatement("CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER, `uuid` TEXT);").execute();
+            this.connection.prepareStatement("CREATE TABLE IF NOT EXISTS `regions` (`name` TEXT, `x1` INTEGER, `y1` INTEGER, `z1` INTEGER, `x2` INTEGER, `y2` INTEGER, `z2` INTEGER, `world` INTEGER, `type` TEXT);").execute();
+            this.connection.prepareStatement("CREATE TABLE IF NOT EXISTS `launchers` (`region_name` TEXT, `x` INTEGER, `y` INTEGER, `z` INTEGER);").execute();
+        }
     }
 }
