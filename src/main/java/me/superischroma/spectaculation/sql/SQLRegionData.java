@@ -3,6 +3,7 @@ package me.superischroma.spectaculation.sql;
 import me.superischroma.spectaculation.Spectaculation;
 import me.superischroma.spectaculation.region.Region;
 import me.superischroma.spectaculation.region.RegionType;
+import java.lang.Object;
 import java.util.ArrayList;
 import java.util.List;
 import org.bukkit.Location;
