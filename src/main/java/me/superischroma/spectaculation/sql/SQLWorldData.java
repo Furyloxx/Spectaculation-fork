@@ -1,6 +1,7 @@
 package me.superischroma.spectaculation.sql;
 
 import me.superischroma.spectaculation.Spectaculation;
+import java.lang.Object;
 import org.bukkit.Bukkit;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
