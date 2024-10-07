@@ -1,6 +1,7 @@
 package me.superischroma.spectaculation.region;
 
 import org.bukkit.Location;
+import java.lang.Object;
 
 public class RegionGenerator
 {
