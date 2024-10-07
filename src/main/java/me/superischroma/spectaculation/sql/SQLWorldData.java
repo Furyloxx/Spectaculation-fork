@@ -1,109 +1,116 @@
 package me.superischroma.spectaculation.sql;
 
 import me.superischroma.spectaculation.Spectaculation;
-import java.lang.Object;
 import org.bukkit.Bukkit;
-import java.sql.ResultSet;
-import java.sql.PreparedStatement;
-import java.sql.Connection;
-import java.sql.SQLException;
 import org.bukkit.World;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class SQLWorldData
 {
-    private static final Spectaculation plugin;
+    private static final Spectaculation plugin = Spectaculation.getPlugin();
+
     private final String SELECT = "SELECT * FROM `worlds` WHERE name=?";
     private final String SELECT_ID = "SELECT * FROM `worlds` WHERE id=?";
     private final String INSERT = "INSERT INTO `worlds` (`id`, `name`) VALUES (?, ?);";
     private final String COUNT = "SELECT COUNT(*) AS rows FROM `worlds`";
-    
-    public boolean exists(final World world) {
-        try (final Connection connection = SQLWorldData.plugin.sql.getConnection()) {
-            final PreparedStatement statement = connection.prepareStatement("SELECT * FROM `worlds` WHERE name=?");
+
+    public boolean exists(World world)
+    {
+        try (Connection connection = plugin.sql.getConnection())
+        {
+            PreparedStatement statement = connection.prepareStatement(SELECT);
             statement.setString(1, world.getName());
-            final ResultSet set = statement.executeQuery();
+            ResultSet set = statement.executeQuery();
             return set.next();
         }
-        catch (final SQLException ex) {
+        catch (SQLException ex)
+        {
             ex.printStackTrace();
-            return false;
         }
+        return false;
     }
-    
-    public boolean existsID(final int id) {
-        try (final Connection connection = SQLWorldData.plugin.sql.getConnection()) {
-            final PreparedStatement statement = connection.prepareStatement("SELECT * FROM `worlds` WHERE id=?");
+
+    public boolean existsID(int id)
+    {
+        try (Connection connection = plugin.sql.getConnection())
+        {
+            PreparedStatement statement = connection.prepareStatement(SELECT_ID);
             statement.setInt(1, id);
-            final ResultSet set = statement.executeQuery();
+            ResultSet set = statement.executeQuery();
             return set.next();
         }
-        catch (final SQLException ex) {
+        catch (SQLException ex)
+        {
             ex.printStackTrace();
-            return false;
         }
+        return false;
     }
-    
-    public int getWorldID(final World world) {
-        try (final Connection connection = SQLWorldData.plugin.sql.getConnection()) {
-            if (!this.exists(world)) {
-                final PreparedStatement statement = connection.prepareStatement("INSERT INTO `worlds` (`id`, `name`) VALUES (?, ?);");
-                statement.setInt(1, this.getWorldCount() + 1);
+
+    public int getWorldID(World world)
+    {
+        try (Connection connection = plugin.sql.getConnection())
+        {
+            if (!exists(world))
+            {
+                PreparedStatement statement = connection.prepareStatement(INSERT);
+                statement.setInt(1, getWorldCount() + 1);
                 statement.setString(2, world.getName());
                 statement.execute();
             }
-            final PreparedStatement statement = connection.prepareStatement("SELECT * FROM `worlds` WHERE name=?");
+            PreparedStatement statement = connection.prepareStatement(SELECT);
             statement.setString(1, world.getName());
-            final ResultSet set = statement.executeQuery();
+            ResultSet set = statement.executeQuery();
             set.next();
-            final int id = set.getInt("id");
+            int id = set.getInt("id");
             set.close();
             return id;
         }
-        catch (final SQLException ex) {
+        catch (SQLException ex)
+        {
             ex.printStackTrace();
-            return -1;
         }
+        return -1;
     }
-    
-    public World getWorld(final int id) {
-        try (final Connection connection = SQLWorldData.plugin.sql.getConnection()) {
-            if (!this.existsID(id)) {
-                final World world = null;
-                if (connection != null) {
-                    connection.close();
-                }
-                return world;
-            }
-            final PreparedStatement statement = connection.prepareStatement("SELECT * FROM `worlds` WHERE id=?");
+
+    public World getWorld(int id)
+    {
+        try (Connection connection = plugin.sql.getConnection())
+        {
+            if (!existsID(id)) return null;
+            PreparedStatement statement = connection.prepareStatement(SELECT_ID);
             statement.setInt(1, id);
-            final ResultSet set = statement.executeQuery();
+            ResultSet set = statement.executeQuery();
             set.next();
-            final String name = set.getString("name");
+            String name = set.getString("name");
             set.close();
             return Bukkit.getWorld(name);
         }
-        catch (final SQLException ex) {
+        catch (SQLException ex)
+        {
             ex.printStackTrace();
-            return null;
         }
+        return null;
     }
-    
-    public int getWorldCount() {
-        try (final Connection connection = SQLWorldData.plugin.sql.getConnection()) {
-            final PreparedStatement statement = connection.prepareStatement("SELECT COUNT(*) AS rows FROM `worlds`");
-            final ResultSet set = statement.executeQuery();
+
+    public int getWorldCount()
+    {
+        try (Connection connection = plugin.sql.getConnection())
+        {
+            PreparedStatement statement = connection.prepareStatement(COUNT);
+            ResultSet set = statement.executeQuery();
             set.next();
-            final int count = set.getInt("rows");
+            int count = set.getInt("rows");
             set.close();
             return count;
         }
-        catch (final SQLException ex) {
+        catch (SQLException ex)
+        {
             ex.printStackTrace();
-            return 0;
         }
-    }
-    
-    static {
-        plugin = Spectaculation.getPlugin();
+        return 0;
     }
 }
