@@ -2,6 +2,7 @@ package me.superischroma.spectaculation.sql;
 
 import me.superischroma.spectaculation.Spectaculation;
 
+import java.lang.Object;
 import java.sql.SQLException;
 import java.sql.DriverManager;
 import java.io.IOException;
