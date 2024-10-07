@@ -1,6 +1,7 @@
 package me.superischroma.spectaculation.region;
 
 import org.bukkit.ChatColor;
+import java.lang.Object;
 
 public enum RegionType
 {
