@@ -1,6 +1,7 @@
 package me.superischroma.spectaculation.region;
 
 import java.util.HashMap;
+import java.lang.Object;
 import org.bukkit.Bukkit;
 import java.util.stream.Collectors;
 import org.bukkit.entity.Player;
