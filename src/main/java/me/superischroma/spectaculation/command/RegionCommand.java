@@ -3,6 +3,7 @@ package me.superischroma.spectaculation.command;
 import me.superischroma.spectaculation.region.Region;
 import me.superischroma.spectaculation.region.RegionGenerator;
 import me.superischroma.spectaculation.region.RegionType;
+import java.lang.Object;
 import java.util.HashMap;
 import java.util.Iterator;
 import org.bukkit.ChatColor;
