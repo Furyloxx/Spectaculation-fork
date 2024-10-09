@@ -2,3 +2,5 @@
 - Tablist
 - More Items & Abilities
 - Farming Update
+
+Gonna Fix Regions Soon enough.

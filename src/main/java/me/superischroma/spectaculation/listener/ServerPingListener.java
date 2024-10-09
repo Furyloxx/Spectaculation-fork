@@ -11,6 +11,6 @@ public class ServerPingListener extends PListener
     @EventHandler
     public void onServerPing(ServerListPingEvent e)
     {
-        e.setMotd(ChatColor.GREEN + "               " + Spectaculation.getPlugin().serverName +" Server  " + ChatColor.RED + "[1.8]\n                     " + SUtil.getRandomVisibleColor() + ChatColor.BOLD + "SKYBLOCK STUFF");
+        e.setMotd(ChatColor.GREEN + "               " + "Cloud Skyblock " + ChatColor.RED + "[1.8-1.21]\n                     " + SUtil.getRandomVisibleColor() + ChatColor.BOLD + "Entity Update!");
     }
 }
